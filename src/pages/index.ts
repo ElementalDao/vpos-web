@@ -1,0 +1,5 @@
+export { default as Pos } from './Pos'
+export { default as Setup } from './Setup'
+export { default as Receipts } from './Receipts'
+export { default as NotFound } from './NotFound'
+export { default as Info } from './Info'
