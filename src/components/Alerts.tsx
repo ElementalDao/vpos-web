@@ -19,7 +19,7 @@ export default function Alerts() {
 
     return (
         <Stack spacing='-1' w='100%' position='absolute' top='0' zIndex={3}>
-            {alerts.error && <Alert w='100%' justifyContent='space-between' status='error' variant='subtle'>
+            {alerts.error && <Alert w='100%' justifyContent='space-between' status='error' variant='solid'>
                 <AlertIcon />
                 {alerts.error}
                 <CloseButton
@@ -43,7 +43,7 @@ export default function Alerts() {
                 />
             </Alert>}
 
-            {alerts.warning && <Alert w='100%' justifyContent='space-between' status='warning' variant='subtle'>
+            {alerts.warning && <Alert w='100%' justifyContent='space-between' status='warning' variant='solid'>
                 <AlertIcon />
                 {alerts.warning}
                 <CloseButton

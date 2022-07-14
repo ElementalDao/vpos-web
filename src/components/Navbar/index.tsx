@@ -11,11 +11,16 @@ export default function Navbar({ path }: any) {
     <Box w='100%' h='max-content' position={'fixed'} zIndex={'2'} bottom='-1'>
       {/*Extra and Misc*/}
       <Collapse in={isOpen} animateOpacity >
-        {/* <LinkTreeMap /> */}
-        <Flex direction='row-reverse' p='3' bg='gray.800' borderTop='1px solid' borderColor='gray.500'>
-          <Button onClick={toggleColorMode}>
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
+        <Flex justify='center' p='3' bg='gray.800' borderTop='1px solid' borderColor='gray.500'>
+          {/* <LinkTreeMap /> */}
+          <Flex direction='row-reverse' w='100%' maxW='620px'>
+            <Button onClick={toggleColorMode}>
+              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            </Button>
+            <Flex flex={1}>
+              <Button as={Link} href='/' children='Landing' />
+            </Flex>
+          </Flex>
         </Flex>
       </Collapse>
       {/*Navbar*/}

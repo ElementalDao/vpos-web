@@ -30,6 +30,7 @@ export default function AccordionReceipt({ from, to, success, isBuy, usdValue, d
                     {success && <><Flex align='center' fontWeight='360'>{isBuy ? 'To' : 'From'}
                         <Text fontWeight='initial' textAlign='left' overflowWrap='anywhere' ml='2' fontSize='xs'
                             children={isBuy ? to : from} />
+                        <Flex ml='auto'><BuyToggle /></Flex>
                     </Flex>
                         <Divider mb='1' /></>}
                     <Flex justify='space-between' align='center'>
@@ -40,12 +41,9 @@ export default function AccordionReceipt({ from, to, success, isBuy, usdValue, d
                             </Flex>
                             <Text maxW='120px' fontWeight={360} textAlign='right' overflowWrap='anywhere' ml='2' fontSize='xs' children={date} />
                         </Flex>
-                        {success && <Flex mr='2' align='center'>
-                            <BuyToggle />
-                            <Flex ml='2' direction='column'>
-                                {isBuy ? '-$' + receiptTotal : '+$' + receiptTotal}
-                                <Text fontSize='sm' fontWeight='360' children={'Total'} />
-                            </Flex>
+                        {success && <Flex direction='column'>
+                            {isBuy ? '-$' + receiptTotal : '+$' + receiptTotal}
+                            <Text fontSize='sm' fontWeight='360' children={'Total'} />
                         </Flex>}
 
                     </Flex>
