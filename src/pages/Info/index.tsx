@@ -2,7 +2,7 @@ import { ArrowRightIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Button, Flex, Heading, Link, ListItem, Stack, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
 import { SocialIcon } from "react-social-icons";
 import { isExternal } from "util/types";
-import { PosDemonstration, PoweredByAvalanche, VposDemonstration } from "./assets";
+import { GitbookIcon, PosDemonstration, PoweredByAvalanche, VposDemonstration } from "./assets";
 export default function Info() {
     const { colorMode, toggleColorMode } = useColorMode()
     let links = {
@@ -23,8 +23,8 @@ export default function Info() {
             <Stack w='100%' justify='center' align='center' position='absolute' top='100px' pt={5}>
                 <Stack textAlign='center' spacing={10} align='center' pb={10}>
                     <Stack maxW={400} spacing={10}>
-                        <Heading size='lg'>Welcome to Virtual Pos ~ Future of POS Technology</Heading>
-                        <Heading fontWeight={500} size='md'>Get paid in what you ask for, aoutomatic currency conversion!</Heading>
+                        <Heading size='lg'>Welcome to Virtual Pos - Future of POS Technology</Heading>
+                        <Heading fontWeight={500} size='md'>Get paid in what you ask for, automatic currency conversion!</Heading>
                         <Flex w='100%' gap={5} justify='center' align='center'>
                             <PosDemonstration boxSize={20} />
                             <ArrowRightIcon w={7} h={7} color='blue.300' />
@@ -32,7 +32,10 @@ export default function Info() {
                         </Flex>
                         <Heading fontWeight={500} size='md'>Recieve your bills on the Avalanche blockchain and have access to them forever!</Heading>
                     </Stack>
-                    <Flex gap={4} p={4}>
+                    <Flex gap={4} p={4} wrap='wrap' justify='center'>
+                        <Button as={Link} isExternal href='https://docs.vpos.dev/' leftIcon={<GitbookIcon h={10} w={8} />}>
+                            Gitbook
+                        </Button>
                         <Button as={Link} isExternal href='https://github.com/ElementalDao' leftIcon={<SocialIcon bgColor="currentColor" network='github' />}>
                             Github
                         </Button>
