@@ -18,7 +18,7 @@ export default function Alerts() {
 
 
     return (
-        <Stack spacing='-1' w='100%' position='absolute' top='0' zIndex={3}>
+        <Stack spacing='-1' w='100%' position='absolute' top='0' zIndex={4}>
             {alerts.error && <Alert w='100%' justifyContent='space-between' status='error' variant='solid'>
                 <AlertIcon />
                 {alerts.error}
