@@ -36,10 +36,10 @@ export default function Info() {
                         <Button as={Link} isExternal href='https://docs.vpos.dev/' leftIcon={<GitbookIcon h={10} w={8} />}>
                             Gitbook
                         </Button>
-                        <Button as={Link} isExternal href='https://github.com/ElementalDao' leftIcon={<SocialIcon bgColor="currentColor" network='github' />}>
+                        <Button as={Link} isExternal href='https://github.com/ElementalDao' /* leftIcon={<SocialIcon bgColor="currentColor" network='github' />} */>
                             Github
                         </Button>
-                        <Button as={Link} isExternal href='https://discord.gg/QY3PpjZKzk' leftIcon={<SocialIcon network="discord" />}>
+                        <Button as={Link} isExternal href='https://discord.gg/QY3PpjZKzk' /* leftIcon={<SocialIcon network="discord" />} */>
                             Discord
                         </Button>
                     </Flex>
@@ -49,7 +49,7 @@ export default function Info() {
                             <ListItem>
                                 <Heading size='sm' children="Connect to the Dapp using Metamask" />
                             </ListItem>
-                            <ListItem>
+                            <Stack>
                                 <Heading mb={3} size='sm' children="Selling" />
                                 <ListItem ml={3}>
                                     {'Select your ( Ask ) what you are asking for. ( You will receive the selected currency )'}
@@ -62,8 +62,8 @@ export default function Info() {
                                 <ListItem ml={3}>
                                     Now the buyer can scan it!.
                                 </ListItem>
-                            </ListItem>
-                            <ListItem>
+                            </Stack>
+                            <Stack>
                                 <Heading mb={3} size='sm' children="Buying" />
                                 <ListItem ml={3}>
                                     {'Select a source currency. ( Selected currency will be used as collateral for the purchase )'}
@@ -80,7 +80,7 @@ export default function Info() {
                                 <ListItem ml={3}>
                                     You will see a confirm pop up, if you see fit confirm the transaction.
                                 </ListItem>
-                            </ListItem>
+                            </Stack>
                             <ListItem>
                                 <Heading mb={3} size='sm' children="Receipts" />
                                 <Text children={'Navigate to the Receipts page, there you can view and export your receipts as pdf files.'} />

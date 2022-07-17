@@ -1,0 +1,1 @@
+export const validAvalancheChains = ['0XA868', '0XA869', '0XA86A']
